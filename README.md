@@ -12,22 +12,24 @@ This is a batch file (BAT) used for printing message with Memobird (咕咕机) i
    The data send should contains:
 
    ```json
-   "ak" = Your access key
-   "memobirdID" = Your memobird ID
-   "useridentifying" = An arbitrary nickname
+   "ak" = "Your access key",
+   "memobirdID" = "Your memobird ID",
+   "useridentifying" = "An arbitrary nickname"
    ```
 
    You should get the message returned containing you **userID** (a digital string)
 
 4. Apply the POST parameters to batch file.
 
+   Where, `AAA = Your access key` obtained in Step 1, `BBB = Your memobird ID ` obtained in Step 2 and `CCC = Your userID ` Obtained in Step 3.
+   
    ```bash
-   curl -d "ak=YOURAK&printcontent=%Msg%&memobirdID=YOURMEMOBIRDID&userID=YOURUSERID" -X POST http://open.memobird.cn/home/printpaper
+   curl -d "ak=AAA&printcontent=%Msg%&memobirdID=BBB&userID=CCC" -X POST http://open.memobird.cn/home/printpaper
    ```
 
 # Edit the directory
 
-It should be noticed that, when directory adding bat file to `Start Up` folder or the user configurations, indirectly referencing other files might fail. So it is strongly recommended to directly reference `base64.bat`.
+It should be noticed that, when adding bat file to `Start Up` folder or the user configurations, indirectly referencing other files might fail. So it is strongly recommended to directly reference `base64.bat`.
 
 **Please change the directory of `base64.bat` in the scripts line 6&7 before using it.**
 
