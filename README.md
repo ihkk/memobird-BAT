@@ -1,5 +1,5 @@
 # Introduction
-This is a batch file (BAT) used for printing message with Memobird (咕咕机) in windows when the system is powered on or off.
+This is a batch file (BAT) used for printing message with Memobird (咕咕机) in windows when the logged in/out to Windows.
 
 # Run with your own Memobird
 
